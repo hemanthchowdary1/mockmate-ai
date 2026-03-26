@@ -3,6 +3,7 @@
 AI-powered interview preparation app that simulates real interview scenarios by generating role-based questions, evaluating answers, and providing structured feedback.
 
 ## Features
+
 - Role-based interview questions (Frontend / Backend / Full Stack / Python)
 - AI-generated questions using Groq API
 - AI evaluation of answers with score and feedback
@@ -12,10 +13,17 @@ AI-powered interview preparation app that simulates real interview scenarios by 
 
 ## Screenshots
 
+### Home
 ![Home](./screenshots/home.png)
 ![Home](./screenshots/home2.png)
+
+### Interview
 ![Interview](./screenshots/interview.png)
+
+### Feedback
 ![Feedback](./screenshots/feedback.png)
+
+### Results
 ![Results](./screenshots/results.png)
 
 ## Tech Stack
