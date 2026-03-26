@@ -1,16 +1,55 @@
-# React + Vite
+# MockMate AI 🎯
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AI-powered interview preparation app that simulates real interview scenarios by generating role-based questions, evaluating answers, and providing structured feedback.
 
-Currently, two official plugins are available:
+## Features
+- Role-based interview questions (Frontend / Backend / Full Stack / Python)
+- AI-generated questions using Groq API
+- AI evaluation of answers with score and feedback
+- Performance insights (strengths & improvements)
+- Authentication system (Login / Signup)
+- Clean and responsive UI
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Screenshots
 
-## React Compiler
+![Home](./screenshots/home.png)
+![Home](./screenshots/home2.png)
+![Interview](./screenshots/interview.png)
+![Feedback](./screenshots/feedback.png)
+![Results](./screenshots/results.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
+- React (Vite)
+- Tailwind CSS
+- Context API
+- Axios
+- Groq API (LLM)
 
-## Expanding the ESLint configuration
+## Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/hemanthchowdary1/mockmate-ai.git
+cd mockmate-ai
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Create `.env` file
+
+```env
+VITE_GROQ_BASE_URL=https://api.groq.com/openai/v1
+VITE_GROQ_API_KEY=your_api_key
+VITE_GROQ_MODEL=your_model
+```
+
+### 4. Run the app
+
+```bash
+npm run dev
+```
