@@ -52,7 +52,7 @@ const Interview = () => {
       <div style={{ maxWidth: "800px", margin: "0 auto" }}>
 
         {/* Header */}
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "24px" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "12px", alignItems: "center", justifyContent: "space-between", marginBottom: "24px" }}>
           <div>
             <span style={{ color: "#818cf8", fontSize: "0.95rem", fontWeight: 600 }}>{role}</span>
             <span style={{ color: "#475569", margin: "0 8px" }}>·</span>

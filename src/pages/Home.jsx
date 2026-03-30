@@ -70,18 +70,20 @@ const Home = () => {
         {/* Hero */}
         <div style={{ textAlign: "center", marginBottom: "64px" }}>
           <h1 style={{
-  fontWeight: 800,
-  fontSize: "clamp(3rem, 7vw, 5rem)", lineHeight: 1.1,
-  marginBottom: "24px", color: "#f8fafc",
-}}>
-  Ace Your Next<br />
-  <span style={{
-    background: "linear-gradient(135deg, #a78bfa, #06b6d4)",
-    WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
-  }}>
-    Tech Interview
-  </span>
-</h1>
+            fontWeight: 800,
+            fontSize: "clamp(2rem, 8vw, 4.5rem)",
+            lineHeight: 1.1,
+            marginBottom: "24px", color: "#f8fafc",
+          }}>
+            Ace Your Next<br />
+            <span style={{
+              background: "linear-gradient(135deg, #a78bfa, #06b6d4)",
+              WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
+            }}>
+              Tech Interview
+            </span>
+          </h1>
+
           <p style={{ color: "#94a3b8", fontSize: "1.1rem", lineHeight: 1.8 }}>
             Practice with AI-generated questions tailored to your role.<br />
             Get instant, detailed feedback on every answer.
@@ -97,7 +99,7 @@ const Home = () => {
           }}>
             01 — Select Your Role
           </p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "14px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "14px" }}>
             {roles.map((r) => (
               <button
                 key={r.label}
@@ -132,7 +134,7 @@ const Home = () => {
           }}>
             02 — Select Difficulty
           </p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "14px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "14px" }}>
             {difficulties.map((d) => (
               <button
                 key={d.label}
@@ -185,7 +187,7 @@ const Home = () => {
         </button>
 
         {/* Stats */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "14px", marginTop: "24px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "14px", marginTop: "24px" }}>
           {[{ v: "10", l: "Questions per session" }, { v: "AI", l: "Powered feedback" }, { v: "6+", l: "Job roles covered" }].map(s => (
             <div key={s.l} style={{
               background: "rgba(255,255,255,0.03)",

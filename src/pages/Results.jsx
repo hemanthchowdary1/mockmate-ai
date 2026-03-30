@@ -53,7 +53,7 @@ const Results = () => {
             background: grade.bg,
             border: `1px solid ${grade.border}`,
             borderRadius: "24px",
-            padding: "40px",
+            padding: "clamp(20px, 5vw, 40px)",
             marginBottom: "32px",
             textAlign: "center"
           }}
@@ -61,7 +61,7 @@ const Results = () => {
           <div
             style={{
               fontFamily: "JetBrains Mono, monospace",
-              fontSize: "5rem",
+              fontSize: "clamp(3.5rem, 12vw, 5rem)",
               fontWeight: 700,
               color: grade.color,
               lineHeight: 1,
@@ -76,7 +76,7 @@ const Results = () => {
           </div>
 
           {/* Stats */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", marginTop: "32px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "16px", marginTop: "32px" }}>
             {[
               { value: questions.length, label: "Total Questions", color: "#f8fafc" },
               { value: feedbacks.filter(f => f.score >= 7).length, label: "Strong Answers", color: "#10b981" },

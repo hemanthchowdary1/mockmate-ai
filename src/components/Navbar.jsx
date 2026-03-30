@@ -48,7 +48,7 @@ const Navbar = () => {
         borderBottom: "1px solid rgba(255,255,255,0.07)",
         display: "flex",
         alignItems: "center",
-        padding: "0 32px",
+        padding: "0 clamp(16px, 4vw, 32px)", // Fluid padding
       }}
     >
       <div
@@ -71,13 +71,13 @@ const Navbar = () => {
             cursor: "pointer",
             display: "flex",
             alignItems: "center",
-            gap: "12px",
+            gap: "clamp(8px, 2vw, 12px)", // Fluid gap
           }}
         >
           <div
             style={{
-              width: "38px",
-              height: "38px",
+              width: "clamp(32px, 8vw, 38px)", // Fluid icon size
+              height: "clamp(32px, 8vw, 38px)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -97,6 +97,7 @@ const Navbar = () => {
               strokeWidth="2.5"
               strokeLinecap="round"
               strokeLinejoin="round"
+              style={{ width: "60%", height: "60%" }}
             >
               <defs>
                 <linearGradient
@@ -113,7 +114,7 @@ const Navbar = () => {
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
             </svg>
           </div>
-          <div style={{ fontWeight: 800, fontSize: "1.35rem", lineHeight: 1 }}>
+          <div style={{ fontWeight: 800, fontSize: "clamp(1.15rem, 4vw, 1.35rem)", lineHeight: 1 }}>
             Mock
             <span
               style={{
@@ -127,7 +128,7 @@ const Navbar = () => {
             <span
               style={{
                 color: "#f8fafc",
-                fontSize: "0.95rem",
+                fontSize: "clamp(0.8rem, 2.5vw, 0.95rem)",
                 marginLeft: "4px",
               }}
             >
@@ -137,7 +138,7 @@ const Navbar = () => {
         </div>
 
         {/* Right side */}
-        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "clamp(8px, 2vw, 16px)" }}>
           {currentUser && (
             <button
               onClick={() => {
@@ -145,16 +146,17 @@ const Navbar = () => {
                 navigate("/");
               }}
               style={{
-                padding: "9px 18px",
+                padding: "clamp(6px, 2vw, 9px) clamp(10px, 3vw, 18px)", // Fluid padding
                 borderRadius: "10px",
                 border: "1px solid rgba(99,102,241,0.35)",
                 background: "rgba(99,102,241,0.1)",
                 color: "#818cf8",
-                fontSize: "0.9rem",
+                fontSize: "clamp(0.75rem, 2.5vw, 0.9rem)", // Fluid font
                 fontFamily: "DM Sans, sans-serif",
                 fontWeight: 600,
                 cursor: "pointer",
                 transition: "all 0.2s ease",
+                whiteSpace: "nowrap", // Prevents text from breaking into two lines
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = "rgba(99,102,241,0.18)";
@@ -176,8 +178,8 @@ const Navbar = () => {
               <button
                 onClick={() => setDropdownOpen((v) => !v)}
                 style={{
-                  width: "42px",
-                  height: "42px",
+                  width: "clamp(36px, 8vw, 42px)", // Fluid size
+                  height: "clamp(36px, 8vw, 42px)",
                   borderRadius: "50%",
                   border: "none",
                   boxShadow: dropdownOpen
@@ -187,7 +189,7 @@ const Navbar = () => {
                   color: "white",
                   fontFamily: "Syne, sans-serif",
                   fontWeight: 700,
-                  fontSize: "1.1rem",
+                  fontSize: "clamp(0.9rem, 3vw, 1.1rem)",
                   cursor: "pointer",
                   display: "flex",
                   alignItems: "center",
@@ -199,6 +201,7 @@ const Navbar = () => {
                   WebkitAppearance: "none",
                   padding: 0,
                   outline: "none",
+                  flexShrink: 0,
                 }}
               >
                 {initials}
@@ -302,17 +305,18 @@ const Navbar = () => {
             <button
               onClick={() => navigate("/login")}
               style={{
-                padding: "10px 22px",
+                padding: "clamp(8px, 2vw, 10px) clamp(16px, 4vw, 22px)",
                 borderRadius: "12px",
                 border: "none",
                 background: "linear-gradient(135deg, #6366f1, #818cf8)",
                 color: "white",
-                fontSize: "0.95rem",
+                fontSize: "clamp(0.85rem, 3vw, 0.95rem)",
                 fontFamily: "DM Sans, sans-serif",
                 fontWeight: 700,
                 cursor: "pointer",
                 boxShadow: "0 4px 15px rgba(99,102,241,0.35)",
                 transition: "all 0.2s ease",
+                whiteSpace: "nowrap",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = "translateY(-1px)";
